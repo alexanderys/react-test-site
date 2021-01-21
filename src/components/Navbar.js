@@ -25,13 +25,13 @@ function Navbar() {
         <nav>
             <UL>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="react-test-site/">Home</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="react-test-site/about">About</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Contact</Link>
+                    <Link to="react-test-site/contact">Contact</Link>
                 </li>
             </UL>
         </nav>
