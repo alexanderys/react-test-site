@@ -35,13 +35,13 @@ function App() {
       <Header />
 
       <Switch>
-        <Route exact path="/">
+        <Route exact path="react-test-site/">
           <Home />
         </Route>
-        <Route path="/about">
+        <Route path="react-test-site/about">
           <About />
         </Route>
-        <Route path="/contact">
+        <Route path="react-test-site/contact">
           <Contact />
         </Route>
       </Switch>
