@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import './App.css'; // needed for google font import
+import { createGlobalStyle } from 'styled-components';
+
+import Header from './components/Header'
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+
+/* Styles */
+const GlobalStyle = createGlobalStyle`
+  :root {font-family: 'Poppins', sans-serif;}
+  body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+  }
+  img {
+    filter: contrast(180%) saturate(6);
+  }
+`
+/* Styles END */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+
+      <Header />
+
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+      </Switch>
+
+      <Footer />
+    </Router>
   );
 }
 
